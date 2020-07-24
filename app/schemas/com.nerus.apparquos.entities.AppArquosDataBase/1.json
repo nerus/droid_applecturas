@@ -1,0 +1,1077 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "78a49a1807514350bbd52f63564545fc",
+    "entities": [
+      {
+        "tableName": "sys_usuarios",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_personal` INTEGER, `id_rol` INTEGER, `nombre` TEXT, `usuario` TEXT, `id_usuario` TEXT, `email` TEXT NOT NULL, `token` TEXT, PRIMARY KEY(`email`))",
+        "fields": [
+          {
+            "fieldPath": "mIdPersonal",
+            "columnName": "id_personal",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdRol",
+            "columnName": "id_rol",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mNombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mUsuario",
+            "columnName": "usuario",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdUsuario",
+            "columnName": "id_usuario",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mMail",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mToken",
+            "columnName": "token",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "email"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cat_Padron",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `idrow` INTEGER, `sb` INTEGER, `sector` INTEGER, `id_ruta` INTEGER, `id_Padron` INTEGER, `id_Cuenta` INTEGER, `id_Poblacion` INTEGER, `razon_social` TEXT, `direccion` TEXT, `clase_usuario` TEXT, `giro` TEXT, `medidor` TEXT, `localizacion` TEXT, `ruta` TEXT, `servicio` TEXT, `situacion` TEXT, `tarifa` TEXT, `tipo_calculo` TEXT, `id_giro` INTEGER, `id_tipocalculo` INTEGER, `lectura_ant` INTEGER, `promedio` INTEGER, `latitud` REAL NOT NULL, `longitud` REAL NOT NULL, `capturado` INTEGER, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIdrow",
+            "columnName": "idrow",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mSb",
+            "columnName": "sb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mSector",
+            "columnName": "sector",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mId_ruta",
+            "columnName": "id_ruta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mId_Padron",
+            "columnName": "id_Padron",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mId_Cuenta",
+            "columnName": "id_Cuenta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mId_Poblacion",
+            "columnName": "id_Poblacion",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mRazon_social",
+            "columnName": "razon_social",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDireccion",
+            "columnName": "direccion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mClase_usuario",
+            "columnName": "clase_usuario",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mGiro",
+            "columnName": "giro",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mMedidor",
+            "columnName": "medidor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLocalizacion",
+            "columnName": "localizacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mRuta",
+            "columnName": "ruta",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mServicio",
+            "columnName": "servicio",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mSituacion",
+            "columnName": "situacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mTarifa",
+            "columnName": "tarifa",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mTipo_calculo",
+            "columnName": "tipo_calculo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mId_giro",
+            "columnName": "id_giro",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mId_tipocalculo",
+            "columnName": "id_tipocalculo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLectura_ant",
+            "columnName": "lectura_ant",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mPromedio",
+            "columnName": "promedio",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLatitud",
+            "columnName": "latitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mLongitud",
+            "columnName": "longitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mCapturado",
+            "columnName": "capturado",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "cat_subsistemas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`sb` INTEGER NOT NULL, `descripcion` TEXT, `registros` TEXT, PRIMARY KEY(`sb`))",
+        "fields": [
+          {
+            "fieldPath": "mSb",
+            "columnName": "sb",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mRegistros",
+            "columnName": "registros",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "sb"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "cat_sectores",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `sb` INTEGER, `sector` INTEGER, `descripcion` TEXT, `registros` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mSb",
+            "columnName": "sb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mSector",
+            "columnName": "sector",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mRegistros",
+            "columnName": "registros",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cat_Rutas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER NOT NULL, `sb` INTEGER, `sector` INTEGER, `id_ruta` INTEGER, `descripcion` TEXT, `registros` INTEGER, `medidos` INTEGER, `fijos` INTEGER, `promedios` INTEGER, `capturadas` INTEGER, `enviadas` INTEGER, `observaciones` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mSb",
+            "columnName": "sb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mSector",
+            "columnName": "sector",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdRuta",
+            "columnName": "id_ruta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mRegistros",
+            "columnName": "registros",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mMedidos",
+            "columnName": "medidos",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFijos",
+            "columnName": "fijos",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mPromedios",
+            "columnName": "promedios",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mCapturadas",
+            "columnName": "capturadas",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mEnviadas",
+            "columnName": "enviadas",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaciones",
+            "columnName": "observaciones",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cat_Anomalias",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_anomalia` INTEGER NOT NULL, `descripcion` TEXT, `observaciones` TEXT, `is_imagerequired` INTEGER, PRIMARY KEY(`id_anomalia`))",
+        "fields": [
+          {
+            "fieldPath": "mId_anomalia",
+            "columnName": "id_anomalia",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaciones",
+            "columnName": "observaciones",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIs_imagerequired",
+            "columnName": "is_imagerequired",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_anomalia"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Opr_Lecturas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_lectura` INTEGER NOT NULL, `id_padron` INTEGER, `id_medidor` TEXT, `lectura` INTEGER, `id_anomalia` INTEGER, `observaciones` TEXT, `id_personal` INTEGER, `fecha` TEXT, `latitud` REAL NOT NULL, `longitud` REAL NOT NULL, `is_uploaded` INTEGER, `fecha_uploaded` TEXT, PRIMARY KEY(`id_lectura`))",
+        "fields": [
+          {
+            "fieldPath": "mIdLectura",
+            "columnName": "id_lectura",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIdPadron",
+            "columnName": "id_padron",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdMedidor",
+            "columnName": "id_medidor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLectura",
+            "columnName": "lectura",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdAnomalia",
+            "columnName": "id_anomalia",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaciones",
+            "columnName": "observaciones",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdPersonal",
+            "columnName": "id_personal",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLatitud",
+            "columnName": "latitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mLongitud",
+            "columnName": "longitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIsUploaded",
+            "columnName": "is_uploaded",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaUploaded",
+            "columnName": "fecha_uploaded",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_lectura"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "cat_personal",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_personal` INTEGER NOT NULL, `nombre` TEXT, `email` TEXT, `token` TEXT, `abc_lecturas` INTEGER, `abc_ordenes` INTEGER, PRIMARY KEY(`id_personal`))",
+        "fields": [
+          {
+            "fieldPath": "mIdPersonal",
+            "columnName": "id_personal",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mNombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mMail",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mToken",
+            "columnName": "token",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mAbcLecturas",
+            "columnName": "abc_lecturas",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mAbcOrdenes",
+            "columnName": "abc_ordenes",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_personal"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cfg_Parametros",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`parametro` TEXT NOT NULL, `valor` TEXT, `descripcion` TEXT, `posible_valor` TEXT, `fecha` TEXT, PRIMARY KEY(`parametro`))",
+        "fields": [
+          {
+            "fieldPath": "mParametro",
+            "columnName": "parametro",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mValor",
+            "columnName": "valor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mPosibleValor",
+            "columnName": "posible_valor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "parametro"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Opr_Bitacoras",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_bitacora` INTEGER NOT NULL, `descripcion` TEXT, `fecha` TEXT, `longitud` REAL, `latitud` REAL, `id_personal` INTEGER, `id_usuario` TEXT, PRIMARY KEY(`id_bitacora`))",
+        "fields": [
+          {
+            "fieldPath": "mIdBitacora",
+            "columnName": "id_bitacora",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLongitud",
+            "columnName": "longitud",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLatitud",
+            "columnName": "latitud",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdPersonal",
+            "columnName": "id_personal",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdUsuario",
+            "columnName": "id_usuario",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_bitacora"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Opr_Ordenes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_orden` TEXT NOT NULL, `id_padron` INTEGER, `id_cuenta` INTEGER, `id_empleado` INTEGER, `id_trabajo` INTEGER, `trabajo` TEXT, `observa_a` TEXT, `longitud` REAL NOT NULL, `latitud` REAL NOT NULL, `localizacion` TEXT, `id_medidor` TEXT, `estatus` TEXT, `nombre` TEXT, `direccion` TEXT, `colonia` TEXT, `poblacion` TEXT, `telefono` TEXT, `genero` TEXT, `fecha_genero` TEXT, `is_uploaded` INTEGER, `fecha_uploaded` TEXT, `capturado` INTEGER, PRIMARY KEY(`id_orden`))",
+        "fields": [
+          {
+            "fieldPath": "mIdOrden",
+            "columnName": "id_orden",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIdPadron",
+            "columnName": "id_padron",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdCuenta",
+            "columnName": "id_cuenta",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdEmpleado",
+            "columnName": "id_empleado",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdTrabajo",
+            "columnName": "id_trabajo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mTrabajo",
+            "columnName": "trabajo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaA",
+            "columnName": "observa_a",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLongitud",
+            "columnName": "longitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mLatitud",
+            "columnName": "latitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mLocalizacion",
+            "columnName": "localizacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdMedidor",
+            "columnName": "id_medidor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mEstatus",
+            "columnName": "estatus",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mNombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDireccion",
+            "columnName": "direccion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mColonia",
+            "columnName": "colonia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mPoblacion",
+            "columnName": "poblacion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mTelefono",
+            "columnName": "telefono",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mGenero",
+            "columnName": "genero",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaGenero",
+            "columnName": "fecha_genero",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIsUpLoaded",
+            "columnName": "is_uploaded",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaUploaded",
+            "columnName": "fecha_uploaded",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mCapturado",
+            "columnName": "capturado",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_orden"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Opr_OTCerradas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_orden` TEXT NOT NULL, `id_trabajo` INTEGER, `trabajo` TEXT, `id_empleado` INTEGER, `observa_b` TEXT, `observa_c` TEXT, `longitud` REAL NOT NULL, `latitud` REAL NOT NULL, `id_medidor` TEXT, `fecha_capturo` TEXT, `fecha_realizo` TEXT, `fecha_cancelo` TEXT, `ejecutada` INTEGER, `id_noejecucion` INTEGER, `is_uploaded` INTEGER, `fecha_uploaded` TEXT, PRIMARY KEY(`id_orden`))",
+        "fields": [
+          {
+            "fieldPath": "mIdOrden",
+            "columnName": "id_orden",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIdTrabajo",
+            "columnName": "id_trabajo",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mTrabajo",
+            "columnName": "trabajo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdEmpleado",
+            "columnName": "id_empleado",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaB",
+            "columnName": "observa_b",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaC",
+            "columnName": "observa_c",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mLongitud",
+            "columnName": "longitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mLatitud",
+            "columnName": "latitud",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIdMedidor",
+            "columnName": "id_medidor",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaGenero",
+            "columnName": "fecha_capturo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaRealizo",
+            "columnName": "fecha_realizo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaCancelo",
+            "columnName": "fecha_cancelo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mEjecutada",
+            "columnName": "ejecutada",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mIdNoEjecucion",
+            "columnName": "id_noejecucion",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mUpLoaded",
+            "columnName": "is_uploaded",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaUploaded",
+            "columnName": "fecha_uploaded",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_orden"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cat_CausasNoEjecucion",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_causa` INTEGER NOT NULL, `descripcion` TEXT, `observaciones` TEXT, `is_imagerequired` INTEGER, PRIMARY KEY(`id_causa`))",
+        "fields": [
+          {
+            "fieldPath": "mIdCausa",
+            "columnName": "id_causa",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservaciones",
+            "columnName": "observaciones",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mImageRequired",
+            "columnName": "is_imagerequired",
+            "affinity": "INTEGER",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_causa"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Cat_Materiales",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_material` TEXT NOT NULL, `descripcion` TEXT, `existencia` INTEGER, `costo` REAL NOT NULL, `udm` TEXT, `fecha_downloaded` TEXT, PRIMARY KEY(`id_material`))",
+        "fields": [
+          {
+            "fieldPath": "mIdMaterial",
+            "columnName": "id_material",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mExistencia",
+            "columnName": "existencia",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mCosto",
+            "columnName": "costo",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mUdm",
+            "columnName": "udm",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaDownloaded",
+            "columnName": "fecha_downloaded",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_material"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Opr_MatCapturados",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id_orden` TEXT NOT NULL, `id_material` TEXT NOT NULL, `udm` TEXT, `descripcion` TEXT, `cantidad` TEXT, `fecha_captura` TEXT, `observacion` TEXT, PRIMARY KEY(`id_orden`, `id_material`))",
+        "fields": [
+          {
+            "fieldPath": "mIdOrden",
+            "columnName": "id_orden",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mIdMaterial",
+            "columnName": "id_material",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "mUdm",
+            "columnName": "udm",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mDescripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mCantidad",
+            "columnName": "cantidad",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mFechaCaptura",
+            "columnName": "fecha_captura",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mObservacion",
+            "columnName": "observacion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id_orden",
+            "id_material"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '78a49a1807514350bbd52f63564545fc')"
+    ]
+  }
+}

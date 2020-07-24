@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/capturamaterial_fragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblCodigo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:text="CODIGO:"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_txtCodigo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                app:counterMaxLength="20"
+                app:layout_constraintEnd_toStartOf="@+id/ic_search"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblCodigo">
+
+                <EditText
+                    android:id="@+id/txtCodigo"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Capture el codigo del articulo ó una descripcion corta"
+                    android:inputType="textCapCharacters"
+                    android:maxLength="20"
+                    android:text="12345678901234567890" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+                <ImageView
+                    android:id="@+id/ic_search"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:maxWidth="42dp"
+                    android:maxHeight="42dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/search"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCodigo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    />
+
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="FAMILIA ROTARIA 452-D, DOCTORES CP 87024 CIUDAD VCITORIA TAM"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/il_txtCodigo"
+                />
+            <TextView
+                android:id="@+id/lblCantidad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="CANTIDAD:"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescripcion"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RelativeLayout
+               android:id="@+id/rlCantidad"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintTop_toBottomOf="@+id/lblCantidad"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               >
+
+                <ImageView
+                    android:id="@+id/ic_minus"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toStartOf="@+id/txtCantidad"
+                    android:layout_toLeftOf="@+id/txtCantidad"
+                    android:maxWidth="42dp"
+                    android:maxHeight="42dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/subtract" />
+
+                <EditText
+                    android:id="@+id/txtCantidad"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="5"
+                    android:text="12345"
+                    android:layout_centerInParent="true"
+                    />
+
+                <ImageView
+                    android:id="@+id/ic_plus"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/txtCantidad"
+                    android:layout_toRightOf="@+id/txtCantidad"
+                    android:maxWidth="42dp"
+                    android:maxHeight="42dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/add" />
+           </RelativeLayout>
+
+<!--
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_txtObserva"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:imeOptions="actionDone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlCantidad">
+
+                <EditText
+                    android:id="@+id/txtObserva"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Capture una observación."
+                    android:inputType="textMultiLine|textCapCharacters"
+                    android:lines="3"
+                    android:maxLength="128"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:text="texto"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+-->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

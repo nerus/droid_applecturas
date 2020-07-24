@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/capturalectura_fragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/rlCmds"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        android:padding="0dp"
+        android:layout_margin="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/cmdGeoUbica"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cmdPhotos"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.333"
+            android:text="UBICACION" />
+        <Button
+            android:id="@+id/cmdPhotos"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:layout_constraintStart_toEndOf="@+id/cmdGeoUbica"
+            app:layout_constraintEnd_toStartOf="@+id/cmdMateriales"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.333"
+            android:text="IMAGENES" />
+        <Button
+            android:id="@+id/cmdMateriales"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+
+            app:layout_constraintStart_toEndOf="@+id/cmdPhotos"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.333"
+
+            android:text="MATERIALES" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlCmds">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/lblMedidor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="MEDIDOR:"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                app:layout_constraintBottom_toBottomOf="@+id/txtMedidor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/txtMedidor" />
+
+            <TextView
+                android:id="@+id/txtMedidor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="S19972506"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                app:layout_constraintBottom_toBottomOf="@+id/txtLocalizacion"
+                app:layout_constraintStart_toEndOf="@id/lblMedidor"
+                app:layout_constraintTop_toTopOf="parent" />
+            <!--
+            <TextView
+                android:id="@+id/lblCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                android:text="CTA.:"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                app:layout_constraintTop_toBottomOf="@+id/txtDireccion"
+                app:layout_constraintStart_toEndOf="@id/txtMedidor" />
+        -->
+
+            <TextView
+                android:id="@+id/txtLocalizacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:text="0506-00202-00-00-00"
+                android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtDireccion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FAMILIA ROTARIA 452-D, DOCTORES, VICTORIA TAMAULIPAS"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtMedidor" />
+            <!--android:textAppearance="?attr/textAppearanceListItem"-->
+
+            <TextView
+                android:id="@+id/txtCuenta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="102506"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
+
+            <TextView
+                android:id="@+id/txtRazonSocial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="SOLUCIONES NERUS SA DE CV"
+                app:layout_constraintStart_toEndOf="@+id/txtCuenta"
+                app:layout_constraintTop_toTopOf="@id/txtCuenta" />
+
+            <TextView
+                android:id="@+id/txtSituacion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="CANCELADA"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
+
+            <TextView
+                android:id="@+id/lblIdOrden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="FOLIO:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCuenta" />
+
+            <TextView
+                android:id="@+id/txtIdOrden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:text="1904002345"
+                app:layout_constraintStart_toEndOf="@+id/lblIdOrden"
+                app:layout_constraintTop_toTopOf="@+id/lblIdOrden" />
+
+            <TextView
+                android:id="@+id/txtTrabajo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="INSTALACION DE AGUA TEXTO MAS EXTE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/lblIdOrden" />
+
+
+            <TextView
+                android:id="@+id/lblFechaGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:text="GENERADO:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lblIdOrden" />
+
+            <TextView
+                android:id="@+id/txtFechaGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginStart="8dp"
+                android:text="20190304 14:23:58.879"
+                app:layout_constraintStart_toEndOf="@+id/lblFechaGenero"
+                app:layout_constraintTop_toTopOf="@+id/lblFechaGenero" />
+
+            <TextView
+                android:id="@+id/txtGenero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ANDRES GARCIA MO"
+                app:layout_constraintTop_toBottomOf="@+id/lblFechaGenero" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#AFABAD"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/txtGenero" />
+
+            <TextView
+                android:id="@+id/orden_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_gravity="right"
+                android:text="observacion a INSTALACION DE AGUA TEXTO MAS EXTE"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view" />
+
+            <View
+                android:id="@+id/line2"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="#AFABAD"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/orden_detail" />
+
+            <Switch
+                android:id="@+id/swEjecutada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Ejecutada ?"
+                android:textOff="NO"
+                android:textOn="SI"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/line2" />
+
+            <RelativeLayout
+                android:id="@+id/rlCausa"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background"
+                android:orientation="horizontal"
+                android:layout_marginLeft="4dp"
+                android:paddingLeft="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/swEjecutada"
+                app:layout_constraintTop_toBottomOf="@id/line2">
+
+                <Spinner
+                    android:id="@+id/cmbCausas"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:spinnerMode="dialog" />
+
+                <ImageView
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="3dp"
+                    android:maxWidth="42dp"
+                    android:maxHeight="42dp"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/dropdown_icon" />
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_txtMedidor"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rlCausa">
+
+                <EditText
+                    android:id="@+id/txtIdMedidor"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Confirme número de medidor."
+                    android:inputType="number|textCapCharacters"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_txtObserva"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/il_txtMedidor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                >
+
+                <EditText
+                    android:id="@+id/txtObserva_b"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Capture el resultado del trabajo."
+                    android:inputType="textMultiLine|textCapCharacters"
+                    android:lines="3"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:overScrollMode="always"
+                    android:scrollbars="vertical" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

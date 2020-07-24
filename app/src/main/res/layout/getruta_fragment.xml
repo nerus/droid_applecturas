@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/lblSb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Subsistema"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rlSub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@+id/lblSb"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spnSub"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:background="@android:color/transparent"/>
+<!--
+            android:layout_centerInParent="true"
+
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+-->
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="3dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dropdown_icon" />
+
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/lblSec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Sector"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlSub"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlSec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@+id/lblSec"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spnSec"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="3dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dropdown_icon" />
+
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/lblRuta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Ruta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlSec"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rlRuta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@+id/lblRuta"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spnRuta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="3dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dropdown_icon" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/lblOrderBy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="Ordernar Por"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlRuta"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rlOrderBy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background"
+        app:layout_constraintTop_toBottomOf="@+id/lblOrderBy"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spnOrderBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:background="@android:color/transparent"/>
+
+        <ImageView
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_alignParentRight="true"
+            android:maxWidth="42dp"
+            android:maxHeight="42dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="3dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/dropdown_icon" />
+
+
+    </RelativeLayout>
+    <Button
+        android:id="@+id/cmdPadron"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:text="RECIBIR CUENTAS DE LA RUTA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rlOrderBy" />
+
+<!--
+    <RelativeLayout
+        android:id="@+id/rlDownloaded"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/cmdPadron">
+
+        <include
+            android:id="@+id/gbRuta"
+            layout="@layout/ruta_row"/>
+    </RelativeLayout>
+-->
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

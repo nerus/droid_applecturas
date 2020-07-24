@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AppArquos</string>
+    <string name="action_settings">Settings</string>
+    <string name="item_tag">item_tag</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="appkey">SNE1302225E3</string>
+</resources>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp">
+
+    <TextView
+        android:id="@+id/lblMedidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MEDIDOR:"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintBottom_toBottomOf="@+id/txtMedidor"
+        app:layout_constraintTop_toTopOf="@+id/txtMedidor" />
+
+    <TextView
+        android:id="@+id/txtMedidor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="8dp"
+        android:text="S19972506"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toBottomOf="@+id/txtLocalizacion"
+        app:layout_constraintStart_toEndOf="@id/lblMedidor"
+        app:layout_constraintTop_toTopOf="@+id/txtLocalizacion" />
+    <!--
+    <TextView
+        android:id="@+id/lblCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:text="CTA.:"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccion"
+        app:layout_constraintStart_toEndOf="@id/txtMedidor" />
+-->
+
+    <TextView
+        android:id="@+id/txtLocalizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="0506-00202-00-00-00"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintEnd_toStartOf="@+id/cmdDetail"
+        tools:layout_editor_absoluteY="2dp" />
+
+    <TextView
+        android:id="@+id/txtDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FAMILIA ROTARIA 452-D, DOCTORES, VICTORIA TAMAULIPAS"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cmdDetail"
+        app:layout_constraintBottom_toTopOf="@+id/txtRazonSocial"
+        app:layout_constraintTop_toBottomOf="@+id/txtMedidor" />
+
+    <TextView
+        android:id="@+id/txtCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="102506"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
+
+    <TextView
+        android:id="@+id/txtRazonSocial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:text="SOLUCIONES NERUS SA DE CV"
+        app:layout_constraintStart_toEndOf="@id/txtCuenta"
+        app:layout_constraintTop_toTopOf="@id/txtCuenta"
+        app:layout_constraintEnd_toStartOf="@+id/txtSituacion"/>
+
+    <TextView
+        android:id="@+id/txtSituacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="CANCELADA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cmdDetail"
+        app:layout_constraintTop_toBottomOf="@+id/txtDireccion" />
+
+    <Button
+        android:id="@+id/cmdDetail"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.08"
+        android:text=">" />
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="4dp"
+        android:background="#AFABAD"
+        app:layout_constraintTop_toBottomOf="@+id/txtCuenta"
+        tools:layout_editor_absoluteX="4dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/ruta_row">
+
+    <TextView
+        android:id="@+id/lblDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="BUSCANDO DATOS..."
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:id="@+id/txtObservaciones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Observaciones"
+        app:layout_constraintTop_toBottomOf="@+id/lblDescripcion"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle" />
+
+    <TextView
+        android:id="@+id/hdTotal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="TOTAL"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/txtObservaciones"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/hdMedidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="MEDIDO"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdTotal"
+        app:layout_constraintTop_toBottomOf="@+id/txtObservaciones"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/hdPromedios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="PROM."
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdMedidos"
+        app:layout_constraintTop_toBottomOf="@+id/txtObservaciones"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/hdFijos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="FIJO"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdPromedios"
+        app:layout_constraintTop_toBottomOf="@+id/txtObservaciones"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/lblTotRegistros"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_weight="1"
+        android:text="0"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hdTotal"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/txtMedidos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdTotal"
+        app:layout_constraintTop_toBottomOf="@+id/hdTotal"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/txtPromedios"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdMedidos"
+        app:layout_constraintTop_toBottomOf="@+id/hdTotal"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/txtFijos"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdPromedios"
+        app:layout_constraintTop_toBottomOf="@+id/hdTotal"
+        app:layout_constraintWidth_percent=".25" />
+
+    <TextView
+        android:id="@+id/hdCapt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="CAPTURADO:"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotRegistros"
+        app:layout_constraintWidth_percent=".35" />
+
+    <TextView
+        android:id="@+id/txtRegCapt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdCapt"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotRegistros"
+        app:layout_constraintWidth_percent=".15" />
+
+    <TextView
+        android:id="@+id/hdSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="ENVIADO:"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/txtRegCapt"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotRegistros"
+        app:layout_constraintWidth_percent=".30" />
+
+    <TextView
+        android:id="@+id/txtRegSend"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="0"
+        android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+        app:layout_constraintStart_toEndOf="@+id/hdSend"
+        app:layout_constraintTop_toBottomOf="@+id/lblTotRegistros"
+        app:layout_constraintWidth_percent=".20" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#AFABAD"
+        app:layout_constraintTop_toBottomOf="@+id/txtRegSend" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

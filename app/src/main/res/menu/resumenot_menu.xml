@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_download"
+        android:orderInCategory="100"
+        android:title="DESCARGAR"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/action_upload"
+        android:orderInCategory="101"
+        android:title="SUBIR CAPTURADAS" />
+
+</menu>
